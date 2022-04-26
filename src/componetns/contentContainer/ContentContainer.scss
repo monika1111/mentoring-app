@@ -1,0 +1,14 @@
+@import "../../assets/styles/variables";
+
+.container {
+  padding: 0 20px 20px 20px;
+  font-family: $generalFontFamily;
+  width: 800px;
+  margin: 0 auto;
+
+  .content {
+    background: $colorWhite;
+    min-height: 600px;
+  }
+}
+

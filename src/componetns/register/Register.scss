@@ -1,0 +1,66 @@
+@import "../../assets/styles/variables";
+
+
+.register-container {
+  padding: 20px;
+  font-family: $generalFontFamily;
+  width: 800px;
+  margin: 0 auto;
+
+  .register-form {
+    background: $colorWhite;
+    margin: 0 auto;
+    padding: 2rem;
+    box-sizing: border-box;
+    color: #333;
+    list-style-type: none;
+
+    .error {
+      color: red;
+    }
+
+    .row {
+      margin-bottom: 30px;
+
+      h2 {
+        font-size: 20px;
+        letter-spacing: 0.05em;
+        font-weight: 500;
+        padding: 20px 15px 15px 15px;
+        color: $colorBlack;
+        text-transform: uppercase;
+        border-bottom: 1px #eaeaea solid;
+        border-left: 2px $colorGreen solid;
+      }
+
+      label {
+        font-size: 14px;
+        letter-spacing: 0.5px;
+        color: $colorBlack;
+      }
+
+      input {
+        width: 100%;
+        border: 1px #ddd solid;
+        padding: 10px;
+        margin-top: 3px;
+      }
+
+      &.submit {
+        width: 9rem;
+        cursor: pointer;
+        background: $colorGreen;
+        border-radius: 999px;
+        padding: 12px 20px 10px 20px;
+        text-align: center;
+        font-size: 15px;
+        white-space: nowrap;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        color: $colorBlack;
+      }
+
+    }
+  }
+}

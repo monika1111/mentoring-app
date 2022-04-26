@@ -1,0 +1,26 @@
+@import url("//fonts.googleapis.com/css?family=Saira+Condensed:300,400,500,600,700,800&subset=latin,latin-ext");
+@import "src/assets/styles/variables.scss";
+
+
+html, body {
+    width: 100%;
+    min-height: 100vh;
+    background: #f5f5f5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+    font-size: 100%;
+    vertical-align: initial;
+    background: 0 0;
+}
+
+#root {
+    width: 100%;
+    min-height: 100vh;
+}
+

@@ -1,0 +1,85 @@
+@import "../../assets/styles/variables";
+
+.suggestions {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 30px 20px;
+
+  .suggestions-error{
+    flex: 1 0 100%;
+    color: red;
+    text-align: left;
+    font-size: 14px;
+  }
+
+  .empty-list {
+    text-align: center;
+    margin: 0 0 22px 10px;
+  }
+
+  h1{
+    font-size: 21px;
+    margin-bottom: 10px;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    color: #67840b;
+  }
+
+  .employees-list-content {
+
+    .employees-list {
+      max-height: 500px;
+      overflow-y: scroll;
+
+      >div {
+        border: 1px solid #ddd;
+        border-radius: 16px;
+        padding: 10px;
+        width: 290px;
+        margin-bottom: 20px;
+
+        .footer {
+          display: flex;
+          justify-content: space-between;
+
+          .job-title{
+            margin-top: 4px;
+            color: $colorGreen;
+          }
+
+          .add-suggestion {
+            font-size: 14px;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+            padding: 4px;
+            text-align: center;
+            background: #8eac2f;
+            letter-spacing: 0.3px;
+            max-height: 25px;
+          }
+        }
+
+        .employee-img-name {
+          display: flex;
+          align-items: center;
+
+          p{
+            font-weight: 600;
+            letter-spacing: 0.6px;
+            font-size: 17px;
+          }
+
+          img {
+            width: 40px;
+            height: 40px;
+            margin-right: 15px;
+          }
+        }
+      }
+    }
+  }
+}
