@@ -14,7 +14,7 @@ export const Login = () => {
 
     const dispatch = useDispatch();
 
-    const { loggedIn, error } = useSelector((state) => state.auth);
+    const { loggedIn, errorLogin } = useSelector((state) => state.auth);
 
     if (loggedIn) {
         return <Navigate to={"/dashboard"}/>
@@ -34,7 +34,7 @@ export const Login = () => {
                     <label>Password</label>
                     <input type="password" value={password} onChange={(e) => setPassword(e.target.value)}/>
                 </li>
-                {error ? <li className="error">failed to login!</li> : ""}
+                {errorLogin ? <li className="error">failed to login!</li> : ""}
                 <li className="login-register">
                     <div className="submit" onClick={() => dispatch(logInStart({ email, password }))}>Login</div>
                     <div className="signup" onClick={() => navigate("/register")}>Sign Up</div>

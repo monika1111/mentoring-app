@@ -21,7 +21,8 @@ const initialState = {
     },
     suggestions: [],
     employeesList: USERS_LIST,
-    error: null,
+    errorRegister: null,
+    errorLogin: null,
 }
 
 const reducer = (state = initialState, action) => {
@@ -30,7 +31,7 @@ const reducer = (state = initialState, action) => {
             return {
                 ...state,
                 longinInProgress: true,
-                error: null
+                errorLogin: null
             };
         case Types.LOG_IN_SUCCESS:
             return {
@@ -44,7 +45,7 @@ const reducer = (state = initialState, action) => {
             return {
                 ...state,
                 longinInProgress: false,
-                error: action.payload
+                errorLogin: action.payload
             };
         case Types.UPDATE_REGISTER_PROFILE:
             return {
@@ -72,13 +73,13 @@ const reducer = (state = initialState, action) => {
             return {
                 ...state,
                 registerInProgress: false,
-                error: null,
+                errorRegister: null,
             };
         case Types.REGISTER_FAILURE:
             return {
                 ...state,
                 registerInProgress: false,
-                error: action.payload,
+                errorRegister: action.payload,
             };
         default:
             return state;

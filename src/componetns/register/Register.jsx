@@ -14,7 +14,7 @@ export const Register = () => {
 
     const dispatch = useDispatch();
 
-    const { profile, loggedIn, error } = useSelector((state) => state.auth);
+    const { profile, loggedIn, errorRegister } = useSelector((state) => state.auth);
 
     const handleSubmit = () => {
         if(step === 1) {
@@ -39,9 +39,14 @@ export const Register = () => {
                 {step === 1 ? <RegisterFirstStep onNext={() => setStep(2)}/> :
                     step === 2 ? <RegisterSecondStep onNext={() => setStep(3)} /> :
                  <RegisterThirdStep />}
-                {error ? <p className="error">failed to register!</p> : ""}
-                <div className="row submit" onClick={handleSubmit}>
-                    {step === 3 ? "SIGN UP" : "NEXT"}
+                {errorRegister ? <p className="error">failed to register!</p> : ""}
+                <div className="row buttons-holder">
+                    {step !== 1 && <div className="submit" onClick={() => setStep(step-1)}>
+                        Previous
+                    </div>}
+                    <div className="submit" onClick={handleSubmit}>
+                        {step === 3 ? "SIGN UP" : "NEXT"}
+                    </div>
                 </div>
             </div>
         </div>
